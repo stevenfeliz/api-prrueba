@@ -1,5 +1,4 @@
 const express = require('express');
-const Requests = require('./Requests');
 const app = express()
 let {PythonShell} = require('python-shell')
 const port = process.env.PORT || 5000
