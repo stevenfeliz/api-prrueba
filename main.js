@@ -5,7 +5,7 @@ const port = process.env.PORT || 5000
 
 app.get("/", async(req,res)=>{
     PythonShell.run('api.py', null, function (err,results) {
-        if (err) throw err;
+        if (err) res.send(err);
        res.send(results[0]) 
       });
 
